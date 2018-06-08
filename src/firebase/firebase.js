@@ -1,5 +1,21 @@
 import * as firebase from 'firebase';
 
+
+// const config = {
+//   apiKey: "AIzaSyCJH43BefrTmbUQ9V7X-MKiyx-zAikTTZE",
+//   authDomain: "expensify-865f9.firebaseapp.com",
+//   databaseURL: "https://expensify-865f9.firebaseio.com",
+//   projectId: "expensify-865f9",
+//   storageBucket: "expensify-865f9.appspot.com",
+//   messagingSenderId: "378859887568"
+// };
+// firebase.initializeApp(config);
+
+// firebase.database().ref().set({
+//   name:'Workneh Tefera'
+// });
+
+
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -15,6 +31,9 @@ const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export { firebase, googleAuthProvider, database as default };
+
+
+
 
 // // child_removed
 // database.ref('expenses').on('child_removed', (snapshot) => {
